@@ -1,4 +1,4 @@
-package dispositivos;
+package Dispositivos;
 
 public class dispositivo {
 	private double altura;

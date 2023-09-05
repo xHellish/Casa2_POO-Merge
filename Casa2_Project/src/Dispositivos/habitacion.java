@@ -1,4 +1,4 @@
-package dispositivos;
+package Dispositivos;
 
 
 public class habitacion extends dispositivo {

@@ -1,4 +1,4 @@
-package dispositivos;
+package Dispositivos;
 
 public class Sala extends dispositivo{
 	private boolean tvEncendido;

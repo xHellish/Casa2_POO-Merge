@@ -1,4 +1,4 @@
-package dispositivos;
+package Dispositivos;
 
 public class lavanderia extends dispositivo {
     private boolean aguaLlenando;
