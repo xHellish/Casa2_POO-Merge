@@ -1,4 +1,4 @@
-package funcionamiento;
+package Patio;
 
 public class Planta extends Vegetacion{
 	private String tipo;

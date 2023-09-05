@@ -1,9 +1,6 @@
-package funcionamiento;
+package Patio;
 import java.util.ArrayList;
 
-import control.Util;
-import schedule.Task;
-import timer.Clock;
 
 public class Vegetacion {
 	public ArrayList<String> tasks;

@@ -1,6 +1,5 @@
-package control;
+package Patio;
 
-import funcionamiento.*;
 
 public class Task_Manager {
 	public Clase_Padre control;

@@ -1,4 +1,4 @@
-package funcionamiento;
+package Patio;
 import java.util.ArrayList;
 
 import control.*;
@@ -59,7 +59,7 @@ public class Clase_Padre {
 	
 	public void Fumigar(Vegetacion objeto){
 		objeto.setPlaga(false);
-		objeto.setFumigado(true);
+		objeto.Ser_Fumigado();
 		Util.report("Fumigando la vegetación");
 	}
 	
