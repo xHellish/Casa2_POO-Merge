@@ -46,5 +46,4 @@ public class Bano extends Habitacion{
 			System.out.println("Los servicios estan desactivados");
 		}
 	}
-
 }
