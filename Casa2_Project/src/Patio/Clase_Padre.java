@@ -1,8 +1,6 @@
 package Patio;
 import java.util.ArrayList;
 
-import control.*;
-
 public class Clase_Padre {
 	private boolean rain;
 	
