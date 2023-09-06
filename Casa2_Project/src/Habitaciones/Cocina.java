@@ -8,13 +8,15 @@ public class Cocina extends Habitacion{
 		super("Cocina",10,3,2);
 	}
 	
-	public void abrirGrifo() {
+	public boolean abrirGrifo() {
 		if(servicios) {
 			grifo=true;
 			System.out.println("Grifo abierto");
+			return true;
 		}
 		else {
 			System.out.println("Los servicios estan desactivados");
+			return false;
 		}
 	}
 	public void cerrarGrifo() {

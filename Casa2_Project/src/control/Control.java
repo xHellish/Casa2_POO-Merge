@@ -15,14 +15,7 @@ public class Control {
 		SAL.isSuspenderAgua();
 
 
-		//MainFrame v1 = new MainFrame();
-		
-		//v1.setVisible(true);
-		
 
-
-
-		
 		
 	}
 
