@@ -1,5 +1,6 @@
 package Patio;
 
+
 import java.util.ArrayList;
 
 public class Main {
@@ -11,7 +12,11 @@ public class Main {
 		ArrayList<Vegetacion> elementos = control.start();
 		ArrayList<Suelo> elementos_suelo = control.start_suelo();
 		TaskPatio manager = new TaskPatio(control, elementos, elementos_suelo);
-		manager.execute(Action.CrecerCesped);
+		GUI frame = new GUI();
+		frame.setVisible(true);
+		Scheduler myscheduler = new Scheduler(elementos);
+		Clock hiloControl = new Clock(myscheduler, frame);
+		hiloControl.start();
 	}
 	
 	

@@ -2,20 +2,17 @@ package Patio;
 
 public class Cesped extends Vegetacion{
 	
-	public Cesped(int pSize) {
-		super(pSize);
+	public Cesped(String pNombre, int pSize) {
+		super(pNombre, pSize);
 	}
 	
-	
-	public void Reducir_Tamaño() {
-		Util.report("cesped disminuyó un centimetro");
-		tamano -= 1;
-	}
+
 	@Override
 	protected void loadMyTasks() {
-		tasks.add("levantarse");
-		tasks.add("trabajar");
-		tasks.add("comer");
-		tasks.add("descansar");
+		tasks.add("crece");
+		tasks.add("es regado");
+		tasks.add("es fumigado");
+		tasks.add("es secado");
+		tasks.add("es cortado");
 	}
 }

@@ -6,14 +6,15 @@ import java.util.Date;
 public class Task {
 	private Date tasktime;
 	private String taskname;
+	private String taskOwner;
 	private boolean procesada;
 	
-	public Task(String pTasktime, String pTaskName) {
+	public Task(String pTasktime, String pTaskName, String pTaskOwner) {
 		this.procesada = false;
-		
+		this.taskOwner = pTaskOwner;
 		this.taskname = pTaskName;
 		
-		String dateString = "2023-08-29 "+pTasktime+":00";
+		String dateString = "2023-08-29 "+pTasktime;
         String pattern = "yyyy-MM-dd HH:mm:ss";
         
         SimpleDateFormat dateFormat = new SimpleDateFormat(pattern);
@@ -32,6 +33,10 @@ public class Task {
 		return taskname;
 	}
 
+	public String getTaskOwner() {
+		return taskOwner;
+	}
+	
 	public boolean isProcesada() {
 		return procesada;
 	}

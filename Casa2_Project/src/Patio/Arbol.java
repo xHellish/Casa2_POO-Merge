@@ -7,8 +7,8 @@ public class Arbol extends Vegetacion{
 	private boolean frutal;
 	private int edad = 0;
 	
-	public Arbol(String pTipo, boolean pFrutal, int pSize) {
-		super(pSize);
+	public Arbol(String pNombre, String pTipo, boolean pFrutal, int pSize) {
+		super(pNombre, pSize);
 		this.tipo = pTipo;
 		this.frutal = pFrutal;
 	}
@@ -19,9 +19,9 @@ public class Arbol extends Vegetacion{
 
 	@Override
 	protected void loadMyTasks() {
-		tasks.add("regar plantas");
-		tasks.add("trabajar");
-		tasks.add("comer");
-		tasks.add("descansar");
+		tasks.add("crece");
+		tasks.add("es regado");
+		tasks.add("es fumigado");
+		tasks.add("es secado");
 	}
 }

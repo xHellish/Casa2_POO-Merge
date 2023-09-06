@@ -1,0 +1,29 @@
+{
+	"tareas" : [
+		{
+			"task": "es regado",
+			"time": "06:00:00",
+			"elemento": "arbol1"
+		},
+		{
+			"task": "es fumigado",
+			"time": "07:00:00",
+			"elemento": "planta2"
+		},
+		{
+			"task": "es cortado",
+			"time": "07:00:00",
+			"elemento": "cesped"
+		},
+		{
+			"task": "es secado",
+			"time": "11:00:00",
+			"elemento": "arbol2"
+		},		
+		{
+			"task": "es secado",
+			"time": "17:00:00",
+			"elemento": "arbol1"
+		}		
+	]
+}

@@ -1,6 +1,7 @@
 package Patio;
 import java.util.ArrayList;
 
+
 public class Clase_Padre {
 	private boolean rain;
 	
@@ -9,20 +10,18 @@ public class Clase_Padre {
 	
 	public ArrayList<Vegetacion> start() {
 		ArrayList<Vegetacion> vegetacion = new ArrayList<Vegetacion>();
-		Planta planta1 = new Planta("Helecho", 5);
+		Planta planta1 = new Planta("planta1", "Helecho", 5);
 		vegetacion.add(planta1);
-		Planta planta2 = new Planta("Rosal", 2);
+		Planta planta2 = new Planta("planta2", "Rosal", 2);
 		vegetacion.add(planta2);
-		
-		Cesped cesped = new Cesped(20);
+		Cesped cesped = new Cesped("cesped", 20);
 		vegetacion.add(cesped);
-		Arbol arbol1 = new Arbol("Roble", false, 10);
+		Arbol arbol1 = new Arbol("arbol1", "Roble", false, 10);
 		vegetacion.add(arbol1);
-		Arbol arbol2 = new Arbol("Manzano", true, 7);
+		Arbol arbol2 = new Arbol("arbol2", "Manzano", true, 7);
 		vegetacion.add(arbol2);
 		return vegetacion;
 	}
-	
 	public ArrayList<Suelo> start_suelo(){
 		ArrayList<Suelo> lista_suelo = new ArrayList<Suelo>();
 		Suelo suelo = new Suelo(30);
@@ -32,27 +31,22 @@ public class Clase_Padre {
 	
 	public void Regar_Plantas(Planta planta) {
 		Util.report("Regando la planta");
+		planta.setRiego(true);
 	}
 	
 	public void EnviarPlaga(Vegetacion elemento) {
+		Util.report("Enviando plaga");
 		elemento.setPlaga(true);
-		String elementoTamano = String.valueOf(elemento.getTamano());
-		Util.report(elementoTamano);
-		
 	}
 	
 	public void Crecer_Cesped(Vegetacion cesped) {
 		Util.report("Crecer el cesped");
-		String elementoTamano = String.valueOf(cesped.getTamano());
-		Util.report(elementoTamano);
 		cesped.Crecer();
-		String elementoTamano2 = String.valueOf(cesped.getTamano());
-		Util.report(elementoTamano2);
 	}
 	
 	public void Cortar_Cesped(Cesped cesped) {
 		Util.report("Cortando el cesped");
-		cesped.Reducir_Tamaño();
+		cesped.reducirTamano();;
 	}
 	
 	public void Fumigar(Vegetacion objeto){
@@ -65,12 +59,22 @@ public class Clase_Padre {
 		Util.report("Revisando el estado del patio");
 	}
 	
-	public void Desaturar(){
+	public void Desaturar(Suelo pSuelo){
+		boolean status1 = pSuelo.isSaturado();
+		rain = false;
 		Util.report("El suelo se desatura");
+		if (status1 == false) {
+			Util.report("El suelo no está saturado");
+		}else {
+			Util.report("El suelo está saturado");
+		}
+		pSuelo.Desaturarse();
+		Util.report("Ahora el suelo está desaturado");
 	}
 	
 	public void Saturar(Suelo psuelo){
 		boolean status1 = psuelo.isSaturado();
+		rain = true;
 		Util.report("El suelo se satura");
 		if (status1 == false) {
 			Util.report("El suelo no está saturado");

@@ -9,7 +9,6 @@ public class TaskPatio implements Itask{
 	ArrayList<Vegetacion> listaElementos;
 	ArrayList<Suelo> listaElementos_suelo;
 	
-	
 	public TaskPatio(Clase_Padre control, ArrayList<Vegetacion> listaV, ArrayList<Suelo> listaS) {
 		manager = new Task_Manager(control);
 		manager_padre = new Clase_Padre();
@@ -18,11 +17,13 @@ public class TaskPatio implements Itask{
 	}
 
 	@Override
-	public void execute(Action pAction) {
+	public void execute(Action pAction, GUI frame) {
 		if (pAction==Action.EnviarPlagasInsectos) {
 			for (Vegetacion elemento: listaElementos){
 				manager.EnviarPlagasInsectos(elemento);
+				frame.decirAccion("5", "Enviar plagas de insectos");
 			}
+			
 		}
 		if (pAction==Action.CrecerCesped) {
 			for(Vegetacion elemento: listaElementos) {
@@ -33,8 +34,8 @@ public class TaskPatio implements Itask{
 			}
 		}
 		if (pAction==Action.PasarAguaVentana) {
-			manager_padre.Pasar_Agua_Ventana();
-		}
+				manager_padre.Pasar_Agua_Ventana();
+			}
 		if (pAction==Action.SituacionPatio) {
 			for (Vegetacion elemento: listaElementos){
 				manager.SituacionPatio(elemento);
