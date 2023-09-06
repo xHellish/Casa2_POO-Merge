@@ -73,9 +73,15 @@ public class Habitacion {
 			System.out.println(this.nombre+": Luz apagada");
 		}
 		
-		public void ensuciar() {
+		public boolean ensuciar() {
 			sucio = true;
 			System.out.println(this.nombre+": Habitacion ensuciada");
+			if(sucio == true){
+				return true;
+			}
+			else{
+				return false;
+			}
 		}
 		
 		public void limpiar() {
