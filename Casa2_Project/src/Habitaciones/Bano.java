@@ -36,14 +36,16 @@ public class Bano extends Habitacion{
 		ducha = false;
 		System.out.println("Ducha cerrada");
 	}
-	public void jalarCadena() {
+	public boolean jalarCadena() {
 		if(servicios) {
 			cadena=true;
 			System.out.println("Se ha jalado la cadena");
 			cadena=false;
+			return false;
 		}
 		else {
 			System.out.println("Los servicios estan desactivados");
+			return true;
 		}
 	}
 }
